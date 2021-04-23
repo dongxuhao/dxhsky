@@ -27,7 +27,7 @@ public class Sm4Utils {
     // 定义分组加密模式使用：PKCS5Padding
     public static final String ALGORITHM_NAME_ECB_PADDING = "SM4/ECB/PKCS5Padding";
 
-    private static final  String HEX_KEY = "86C63180C2806ED1F47B859DE501215B";
+    private static final  String HEX_KEY = "86C63180C2806ED1F47B859DE5012132";
 
     // 128-32位16进制；256-64位16进制
     public static final int DEFAULT_KEY_SIZE = 128;
