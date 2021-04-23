@@ -23,7 +23,7 @@ public class Sm4UtilsController {
 
     @ApiOperation(value = "加密", notes = "加密")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "name", value = "需加密内容", dataType = "String", paramType = "query")})
+            @ApiImplicitParam(name = "name", value = "需加密内容", dataType = "String", paramType = "path")})
     @GetMapping("/encryptEcb/{name}")
     @ResponseBody
     //@PathVaribale 获取url路径的数据  localhost:8080/hello/id
@@ -37,7 +37,7 @@ public class Sm4UtilsController {
 
     @ApiOperation(value = "解密", notes = "解密")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "name", value = "需解密内容", dataType = "String", paramType = "path")})
+            @ApiImplicitParam(name = "id", value = "需解密内容", dataType = "String", paramType = "query")})
     @GetMapping("/decryptEcb")
     @ResponseBody
     //@RequestParam 获取请求参数的值  localhost:8080/hello?userId=1000
@@ -52,7 +52,7 @@ public class Sm4UtilsController {
         return mSm4UtilsService.decryptEcb(param);
     }
 
-    @ApiOperation(value = "登录", notes = "解密")
+    @ApiOperation(value = "登录", notes = "登录")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "json", value = "账号密码", dataType = "String", paramType = "path")})
     @PostMapping("/login")
